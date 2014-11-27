@@ -1,0 +1,1 @@
+﻿body{background:#333}body #heroes{overflow:hidden}body #heroes li{background-repeat:no-repeat;border:1px solid #cac8c2;border-radius:3px;float:left;list-style:none;height:94px;margin:0 5px 5px 0;opacity:.6;position:relative;width:71px}body #heroes li:hover{opacity:1}body #heroes li.ui-state-placeholder{background-color:rgba(255,187,0,.2)}

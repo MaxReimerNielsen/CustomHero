@@ -1,0 +1,41 @@
+﻿body {
+  background: #333;
+
+  #heroes {
+    overflow: hidden;
+
+    li {
+      background-repeat: no-repeat;
+      border: 1px solid #cac8c2;
+      border-radius: 3px;
+      float: left;
+      list-style: none;
+      height: 94px;
+      margin: 0 5px 5px 0;
+      opacity: 0.6;
+      position: relative;
+      width: 71px;
+
+      /*
+      &:hover:after {
+        background: rgba(230, 168, 41, 0.2);
+        border-radius: 3px;
+        content: "";
+        height: 94px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 71px;
+      }
+      */
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.ui-state-placeholder {
+        background-color: rgba(255, 187, 0, 0.2);
+      }
+    }
+  }
+}
