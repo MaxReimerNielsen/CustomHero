@@ -8,30 +8,27 @@ body #heroes li {
   background-repeat: no-repeat;
   border: 1px solid #cac8c2;
   border-radius: 3px;
+  color: #f6f5f5;
   float: left;
   list-style: none;
-  height: 94px;
+  height: 64px;
   margin: 0 5px 5px 0;
   opacity: 0.6;
+  padding: 3px;
   position: relative;
-  width: 71px;
-  /*
-      &:hover:after {
-        background: rgba(230, 168, 41, 0.2);
-        border-radius: 3px;
-        content: "";
-        height: 94px;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 71px;
-      }
-      */
+  width: 65px;
 }
 body #heroes li:hover {
   opacity: 1;
 }
 body #heroes li.ui-state-placeholder {
   background-color: rgba(255, 187, 0, 0.2);
+}
+body #heroes li span {
+  bottom: 3px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 9px;
+  position: absolute;
+  text-shadow: 1px 1px 2px #333;
 }
 /*# sourceMappingURL=customhero.css.map */

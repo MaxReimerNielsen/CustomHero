@@ -63,9 +63,119 @@
     <Content Include="css\customhero.min.css">
       <DependentUpon>customhero.css</DependentUpon>
     </Content>
+    <Content Include="images\abaddon.png" />
+    <Content Include="images\alchemist.png" />
+    <Content Include="images\ancient_apparition.png" />
+    <Content Include="images\antimage.png" />
+    <Content Include="images\axe.png" />
+    <Content Include="images\bane.png" />
+    <Content Include="images\batrider.png" />
+    <Content Include="images\beastmaster.png" />
+    <Content Include="images\bloodseeker.png" />
+    <Content Include="images\bounty_hunter.png" />
+    <Content Include="images\brewmaster.png" />
+    <Content Include="images\bristleback.png" />
+    <Content Include="images\broodmother.png" />
+    <Content Include="images\centaur.png" />
+    <Content Include="images\chaos_knight.png" />
+    <Content Include="images\chen.png" />
+    <Content Include="images\clinkz.png" />
+    <Content Include="images\crystal_maiden.png" />
+    <Content Include="images\dark_seer.png" />
+    <Content Include="images\dazzle.png" />
+    <Content Include="images\death_prophet.png" />
+    <Content Include="images\disruptor.png" />
+    <Content Include="images\doom_bringer.png" />
+    <Content Include="images\dragon_knight.png" />
+    <Content Include="images\drow_ranger.png" />
+    <Content Include="images\earthshaker.png" />
+    <Content Include="images\earth_spirit.png" />
+    <Content Include="images\elder_titan.png" />
+    <Content Include="images\ember_spirit.png" />
+    <Content Include="images\enchantress.png" />
+    <Content Include="images\enigma.png" />
+    <Content Include="images\faceless_void.png" />
+    <Content Include="images\furion.png" />
+    <Content Include="images\gyrocopter.png" />
+    <Content Include="images\huskar.png" />
+    <Content Include="images\invoker.png" />
+    <Content Include="images\jakiro.png" />
+    <Content Include="images\juggernaut.png" />
+    <Content Include="images\keeper_of_the_light.png" />
+    <Content Include="images\kunkka.png" />
+    <Content Include="images\legion_commander.png" />
+    <Content Include="images\leshrac.png" />
+    <Content Include="images\lich.png" />
+    <Content Include="images\life_stealer.png" />
+    <Content Include="images\lina.png" />
+    <Content Include="images\lion.png" />
+    <Content Include="images\lone_druid.png" />
+    <Content Include="images\luna.png" />
+    <Content Include="images\lycan.png" />
+    <Content Include="images\magnataur.png" />
+    <Content Include="images\medusa.png" />
+    <Content Include="images\meepo.png" />
+    <Content Include="images\mirana.png" />
+    <Content Include="images\morphling.png" />
+    <Content Include="images\naga_siren.png" />
+    <Content Include="images\necrolyte.png" />
+    <Content Include="images\nevermore.png" />
+    <Content Include="images\night_stalker.png" />
+    <Content Include="images\nyx_assassin.png" />
+    <Content Include="images\obsidian_destroyer.png" />
+    <Content Include="images\ogre_magi.png" />
+    <Content Include="images\omniknight.png" />
+    <Content Include="images\oracle.png" />
+    <Content Include="images\phantom_assassin.png" />
+    <Content Include="images\phantom_lancer.png" />
+    <Content Include="images\phoenix.png" />
+    <Content Include="images\puck.png" />
+    <Content Include="images\pudge.png" />
+    <Content Include="images\pugna.png" />
+    <Content Include="images\queenofpain.png" />
+    <Content Include="images\rattletrap.png" />
+    <Content Include="images\razor.png" />
+    <Content Include="images\riki.png" />
+    <Content Include="images\rubick.png" />
+    <Content Include="images\sand_king.png" />
+    <Content Include="images\shadow_demon.png" />
+    <Content Include="images\shadow_shaman.png" />
+    <Content Include="images\shredder.png" />
+    <Content Include="images\silencer.png" />
+    <Content Include="images\skeleton_king.png" />
+    <Content Include="images\skywrath_mage.png" />
+    <Content Include="images\slardar.png" />
+    <Content Include="images\slark.png" />
+    <Content Include="images\sniper.png" />
+    <Content Include="images\spectre.png" />
+    <Content Include="images\spirit_breaker.png" />
+    <Content Include="images\storm_spirit.png" />
+    <Content Include="images\sven.png" />
+    <Content Include="images\techies.png" />
+    <Content Include="images\templar_assassin.png" />
+    <Content Include="images\terrorblade.png" />
+    <Content Include="images\tidehunter.png" />
+    <Content Include="images\tinker.png" />
+    <Content Include="images\tiny.png" />
+    <Content Include="images\treant.png" />
+    <Content Include="images\troll_warlord.png" />
+    <Content Include="images\tusk.png" />
+    <Content Include="images\undying.png" />
+    <Content Include="images\ursa.png" />
+    <Content Include="images\vengefulspirit.png" />
+    <Content Include="images\venomancer.png" />
+    <Content Include="images\viper.png" />
+    <Content Include="images\visage.png" />
+    <Content Include="images\warlock.png" />
+    <Content Include="images\weaver.png" />
+    <Content Include="images\windrunner.png" />
+    <Content Include="images\wisp.png" />
+    <Content Include="images\witch_doctor.png" />
+    <Content Include="images\zuus.png" />
     <Content Include="index.htm" />
     <Content Include="scripts\customhero.js" />
     <Content Include="packages.config" />
+    <Content Include="data\heroes.json" />
     <None Include="scripts\jquery-2.1.0.intellisense.js" />
     <None Include="scripts\jquery-2.1.0-vsdoc.js" />
     <Content Include="scripts\jquery-2.1.0.js" />
@@ -114,9 +224,11 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>robocopy "$(ProjectDir)css" "C:\inetpub\wwwroot\CustomHero\css" customhero.min.css /e /PURGE
-robocopy "$(ProjectDir)scripts" "C:\inetpub\wwwroot\CustomHero\scripts" customhero.js /e /PURGE
-robocopy $(ProjectDir) "C:\inetpub\wwwroot\CustomHero" index.htm /PURGE
+    <PostBuildEvent>robocopy "$(ProjectDir)css" "$(InstanceFolder)css" customhero.min.css /e /PURGE
+robocopy "$(ProjectDir)scripts" "$(InstanceFolder)scripts" customhero.js /e /PURGE
+robocopy "$(ProjectDir)data" "$(InstanceFolder)data" *.* /e /PURGE
+robocopy "$(ProjectDir)images" "$(InstanceFolder)images" *.* /e /PURGE
+robocopy $(ProjectDir) $(InstanceFolder) index.htm /PURGE
 if errorlevel 1 exit 0 else exit %2525errorlevel%2525</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -9,49 +9,29 @@
   $("*").disableSelection();
 
   var initHeroes = function () {
-    var heroes = [
-      "abaddon",
-      "alchemist",
-      "ancient apparition",
-      "anti-mage",
-      "axe",
-      "bane",
-      "batrider",
-      "beastmaster",
-      "bloodseeker",
-      "bounty hunter",
-      "brewmaster",
-      "bristleback",
-      "broodmother",
-      "centaur warrunner",
-      "chaos knight",
-      "chen",
-      "clinkz",
-      "clockwerk",
-      "crystal maiden",
-      "dark seer",
-      "dazzle",
-      "death prophet",
-      "disruptor",
-      "doom",
-      "dragon knight"
-    ];
+    $.getJSON('/data/heroes.json', function (data) {
+      createThumbnails(data);
+    });
+  };
 
-    for (var i = 0; i < 120; i++) {
+  var createThumbnails = function (data) {
+    for (var i = 0; i < 115; i++) {
       var $listItem;
 
-      if (i < heroes.length) {
-        $listItem = $('<li style="background-image: url(http://dota2layout.com/images/heroes/npc_dota_hero_' + heroes[i] + '.png);" />');
+      if (i < data.heroes.length) {
+        var hero = data.heroes[i],
+          name = hero.name,
+          localizedName = hero.localized_name;
+
+        $listItem = $('<li style="background-image: url(/images/' + name + '.png);" />').attr('data-hero-id', hero.id);
+        $span = $('<span />').text(localizedName);
+        $span.appendTo($listItem);
       } else {
         $listItem = $('<li />');
       }
 
       $listItem.appendTo($heroes);
     }
-
-    _.each(heroes, function (name) {
-      
-    });
   };
 
   initHeroes();
