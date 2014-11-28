@@ -21,13 +21,23 @@
       if (i < data.heroes.length) {
         var hero = data.heroes[i],
           name = hero.name,
-          localizedName = hero.localized_name;
+          localizedName = hero.localized_name,
+          id = hero.id,
+          $span = $('<span />').text(localizedName),
+          bgPadding = 5,
+          spriteWidth = 81,
+          spriteHeight = 104,
+          imagePerRow = 12,
+          leftPos = -(((id % imagePerRow) - 1) * spriteWidth) - bgPadding,
+          topPos = -(Math.floor(id / imagePerRow) * spriteHeight) - bgPadding,
+          bgPosition = leftPos + 'px ' + topPos + 'px';
 
-        $listItem = $('<li style="background-image: url(/images/' + name + '.png);" />').attr('data-hero-id', hero.id);
-        $span = $('<span />').text(localizedName);
+        console.log(id % 12);
+
+        $listItem = $('<li style="background-position: ' + bgPosition + ';" />').attr('data-hero-id', id).attr('data-hero-name', name);
         $span.appendTo($listItem);
       } else {
-        $listItem = $('<li />');
+        $listItem = $('<li style="background-image: none;" />');
       }
 
       $listItem.appendTo($heroes);
